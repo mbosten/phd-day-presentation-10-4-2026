@@ -1,0 +1,61 @@
+.center-xy {
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    -ms-transform: translateY(-50%), translateX(-50%);
+    transform: translateY(-50%), translateX(-50%);
+}
+
+.fake-h1 {
+    font-size: 100px;
+    font-weight: 600;
+    line-height: 120px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-wrap: break-word;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+}
+
+.fake-h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76.8px;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-block-end: 12px;
+    overflow-wrap: break-word;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: left;
+}
+
+.swap {
+  display: inline-block;
+  position: relative;
+}
+
+/* stack both words in the same position */
+.swap > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+/* reserve space so the sentence doesn't jump */
+.swap::before {
+  content: "Vietoris–Rips complex"; /* use the longer of the two */
+  visibility: hidden;
+  white-space: nowrap;
+}
