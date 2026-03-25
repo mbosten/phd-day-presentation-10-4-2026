@@ -34,7 +34,7 @@ format:
 
 :::: {.columns}
 
-::: {.column width="40%" .fragment}
+::: {.column width="60%" .fragment}
 ```{python}
 
 import numpy as np
@@ -125,7 +125,7 @@ def generate_spaghetti_wall_figure(
     n_strands=42,
     seed=11,
     named_strands=None,
-    figsize=(9, 9),
+    figsize=(11, 11),
     wall_color="white",
     pasta_color="#d8c07a",
     neutral_alpha=0.97,
@@ -255,7 +255,7 @@ def generate_spaghetti_wall_figure(
         ax.text(
             lx, ly, label,
             color=color,
-            fontsize=10,
+            fontsize=13,
             ha=ha,
             va="center",
             zorder=7,
@@ -282,7 +282,7 @@ if __name__ == "__main__":
 ```
 :::
 
-::: {.column width="40%" .fragment}
+::: {.column width="40%"}
 - Increasingly complex models/pipelines
 - Increasingly outdated datasets
 - **Marginal improvements**
@@ -290,19 +290,54 @@ if __name__ == "__main__":
 
 ::::
 
-## Title
+## Some questions
 
-We consider the 
-<span class="swap">
-  <span class="fragment fade-out" data-fragment-index="1">Vietoris–Rips complex</span>
-  <span class="fragment fade-in"  data-fragment-index="1">graph</span>
-</span>
-.
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {.fragment .large}
+Is this necessary?
+:::
+
+::: {.fragment .large}
+Are these marginal improvements robust?
+:::
+
+::: {.fragment .large}
+Does it even matter?
+:::
+:::
 
 
-# Characterizing topological complexity of embedding spaces through a <br> multiverse analysis.
+::: {.column width="60%" .fragment}
 
-# Characterizing [topological complexity]{style="color:blue;"} of [embedding spaces]{style="color:green;"} through a <br> [multiverse analysis]{style="color:red;"}. 
+::: {.large}
+**No**
+:::
+
+::: {.large}
+**Likely not**
+:::
+
+::: {.large}
+**Not sure yet**
+:::
+:::
+::::
+
+## So now what?
+
+Datasets are only **partially representative** and often flawed
+
+New studies are constantly published based on these datasets
+
+Performance is **outstanding** but **meaningless**
+
+Practical adoption is **minimal**
+
+## Data-driven estimate of dataset quality
+
 
 
 ## {auto-animate=true}

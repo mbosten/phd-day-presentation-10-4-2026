@@ -226,17 +226,17 @@ Maarten Bosten
 <section id="deep-spaghetti-research" class="slide level2 center">
 <h2>Deep Spaghetti Research</h2>
 <div class="columns">
-<div class="column fragment" style="width:40%;">
-<div id="4865fafb" class="cell" data-execution_count="1">
+<div class="column fragment" style="width:60%;">
+<div id="ea054ba9" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="lay-presentation_files/figure-revealjs/cell-2-output-1.png" width="684" height="684"></p>
+<p><img data-src="lay-presentation_files/figure-revealjs/cell-2-output-1.png" width="836" height="832"></p>
 </figure>
 </div>
 </div>
 </div>
-</div><div class="column fragment" style="width:40%;">
+</div><div class="column" style="width:40%;">
 <ul>
 <li class="fragment">Increasingly complex models/pipelines</li>
 <li class="fragment">Increasingly outdated datasets</li>
@@ -244,19 +244,40 @@ Maarten Bosten
 </ul>
 </div></div>
 </section>
-<section id="title" class="slide level2 center">
-<h2>Title</h2>
-<p>We consider the <span class="swap"> <span class="fragment fade-out" data-fragment-index="1">Vietoris–Rips complex</span> <span class="fragment fade-in" data-fragment-index="1">graph</span> </span> .</p>
+<section id="some-questions" class="slide level2 center">
+<h2>Some questions</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="fragment large">
+<p>Is this necessary?</p>
+</div>
+<div class="fragment large">
+<p>Are these marginal improvements robust?</p>
+</div>
+<div class="fragment large">
+<p>Does it even matter?</p>
+</div>
+</div><div class="column fragment" style="width:60%;">
+<div class="large">
+<p><strong>No</strong></p>
+</div>
+<div class="large">
+<p><strong>Likely not</strong></p>
+</div>
+<div class="large">
+<p><strong>Not sure yet</strong></p>
+</div>
+</div></div>
 </section>
-<section id="characterizing-topological-complexity-of-embedding-spaces-through-a-multiverse-analysis." class="title-slide slide level1 center">
-<h1>Characterizing topological complexity of embedding spaces through a <br> multiverse analysis.</h1>
-
+<section id="so-now-what" class="slide level2 center">
+<h2>So now what?</h2>
+<p>Datasets are only <strong>partially representative</strong> and often flawed</p>
+<p>New studies are constantly published based on these datasets</p>
+<p>Performance is <strong>outstanding</strong> but <strong>meaningless</strong></p>
+<p>Practical adoption is <strong>minimal</strong></p>
 </section>
-
-<section>
-<section id="characterizing-topological-complexity-of-embedding-spaces-through-a-multiverse-analysis.-1" class="title-slide slide level1 center">
-<h1>Characterizing <span style="color:blue;">topological complexity</span> of <span style="color:green;">embedding spaces</span> through a <br> <span style="color:red;">multiverse analysis</span>.</h1>
-
+<section id="data-driven-estimate-of-dataset-quality" class="slide level2 center">
+<h2>Data-driven estimate of dataset quality</h2>
 </section>
 <section id="section" class="slide level2 center" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"></h2>
@@ -338,7 +359,7 @@ Maarten Bosten
 <section class="slide level2 center">
 
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="414" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 413;"><span id="cb1-414"><a href=""></a>containercube <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="449" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 448;"><span id="cb1-449"><a href=""></a>containercube <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -346,11 +367,11 @@ Maarten Bosten
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="419" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 418;"><span id="cb2-419"><a href=""></a><span class="im">import</span> {createCubeScene} <span class="im">from</span> <span class="st">"./visualizations/cubeScene.js"</span><span class="op">;</span></span>
-<span id="cb2-420"><a href=""></a></span>
-<span id="cb2-421"><a href=""></a>cubescene <span class="op">=</span> <span class="fu">createCubeScene</span>(containercube<span class="op">,</span> {</span>
-<span id="cb2-422"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb2-423"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="454" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 453;"><span id="cb2-454"><a href=""></a><span class="im">import</span> {createCubeScene} <span class="im">from</span> <span class="st">"./visualizations/cubeScene.js"</span><span class="op">;</span></span>
+<span id="cb2-455"><a href=""></a></span>
+<span id="cb2-456"><a href=""></a>cubescene <span class="op">=</span> <span class="fu">createCubeScene</span>(containercube<span class="op">,</span> {</span>
+<span id="cb2-457"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb2-458"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -370,7 +391,7 @@ Maarten Bosten
 <section class="slide level2 center">
 
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="429" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 428;"><span id="cb3-429"><a href=""></a>containertorus <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="464" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 463;"><span id="cb3-464"><a href=""></a>containertorus <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -378,11 +399,11 @@ Maarten Bosten
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="434" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 433;"><span id="cb4-434"><a href=""></a><span class="im">import</span> {createTorusScene} <span class="im">from</span> <span class="st">"./visualizations/torusScene.js"</span><span class="op">;</span></span>
-<span id="cb4-435"><a href=""></a></span>
-<span id="cb4-436"><a href=""></a>torusscene <span class="op">=</span> <span class="fu">createTorusScene</span>(containertorus<span class="op">,</span> {</span>
-<span id="cb4-437"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb4-438"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="469" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 468;"><span id="cb4-469"><a href=""></a><span class="im">import</span> {createTorusScene} <span class="im">from</span> <span class="st">"./visualizations/torusScene.js"</span><span class="op">;</span></span>
+<span id="cb4-470"><a href=""></a></span>
+<span id="cb4-471"><a href=""></a>torusscene <span class="op">=</span> <span class="fu">createTorusScene</span>(containertorus<span class="op">,</span> {</span>
+<span id="cb4-472"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb4-473"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -404,7 +425,7 @@ Maarten Bosten
 <div class="iframe-wrapper">
 <p><iframe id="phframe" src="https://mbosten.github.io/simplicial-homology-visualization/" title="Persistent Homology Demo" allowfullscreen=""></iframe></p>
 </div>
-</section></section>
+</section>
 <section id="the-shape-of-a-point-cloud" class="title-slide slide level1 center">
 <h1>The shape of a point cloud…</h1>
 <div class="fragment">
