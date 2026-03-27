@@ -7,6 +7,13 @@
     transform: translateY(-50%), translateX(-50%);
 }
 
+
+/* Target the fragment for current highlight */
+.reveal .fragment .highlight-green {
+  color: #008000 !important;    /* dark green */
+}
+
+/* For title separation slides */
 .fake-h1 {
     font-size: 100px;
     font-weight: 600;

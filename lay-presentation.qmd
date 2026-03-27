@@ -1,6 +1,6 @@
 ---
 title: "A Multiverse Analysis on Topological Complexity of Network Traffic Embeddings"
-subtitle: "An assessment of topological stability under nuisance parameter perturbations"
+subtitle: "Data-driven estimates of dataset quality without expert knowledge"
 jupyter: python3
 author:
   - name: "Maarten Bosten"
@@ -16,26 +16,50 @@ format:
         center: true
         width: 1920
         height: 1080
+        fontsize: 44px
         auto-animate-unmatched: true
         auto-animate-easing: ease-in-out
         css: laystyle.css
 ---
 
-## Motivation
+## Network Intrusion Detection Research 
 
+:::: {.columns .nonincremental}
+::: {.column width="50%" .nonincremental}
+
+::: {.fragment fragment-index=1}
 - Stellar intrusion detection performance
-- Datasets are flawed 
+:::
+
+::: {.fragment fragment-index=2}
+- Overly complex pipelines ➜ Marginal improvements
+:::
+
+::: {.fragment .nonincremental fragment-index=3}
+- Known dataset flaws
     - Marginally representative
+    - Outdated
     - Spurious features
-- Mediocre cross-dataset generalization
+:::
 
+::: {.fragment}
+- Sampling bias & data snooping are widespread
+:::
 
-## Deep Spaghetti Research
+::: {.fragment}
+- Poor cross-dataset generalization performance
+:::
 
-:::: {.columns}
+::: {.fragment}
+- Minimal real-world implementation
+:::
 
-::: {.column width="60%" .fragment}
+:::
+
+::: {.column width="50%" .nonincremental}
+::: {.fragment fragment-index=0}
 ```{python}
+#| fig-align: center
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -281,50 +305,22 @@ if __name__ == "__main__":
     plt.show()
 ```
 :::
-
-::: {.column width="40%"}
-- Increasingly complex models/pipelines
-- Increasingly outdated datasets
-- **Marginal improvements**
-:::
-
-::::
-
-## Some questions
-
-:::: {.columns}
-
-::: {.column width="40%"}
-
-::: {.fragment .large}
-Is this necessary?
-:::
-
-::: {.fragment .large}
-Are these marginal improvements robust?
-:::
-
-::: {.fragment .large}
-Does it even matter?
-:::
-:::
-
-
-::: {.column width="60%" .fragment}
-
-::: {.large}
-**No**
-:::
-
-::: {.large}
-**Likely not**
-:::
-
-::: {.large}
-**Not sure yet**
-:::
 :::
 ::::
+
+## So now what?
+
+::: {.fragment fragment-index=0}
+::: {.fragment .highlight-current-red fragment-index=1}
+**Yet another intrusion detection model?**
+:::
+:::
+
+::: {.fragment .fade-up fragment-index=2}
+::: {.fragment .highlight-green fragment-index=2}
+**Study the quality of datasets!**
+:::
+:::
 
 ## So now what?
 
