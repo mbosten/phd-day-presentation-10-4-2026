@@ -322,6 +322,15 @@ if __name__ == "__main__":
 :::
 :::
 
+## The idea
+### A high-quality dataset is one that, given the perfect model, facilitates cross-dataset generalization.
+
+
+## Preliminaries
+1. Deep learning (embedding) prevalence
+2. Anomaly-based intrusion detection
+
+
 ## So now what?
 
 Datasets are only **partially representative** and often flawed
