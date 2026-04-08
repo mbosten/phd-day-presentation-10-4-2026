@@ -1,5 +1,5 @@
 ---
-title: "A Multiverse Analysis on Topological Complexity of Network Traffic Embeddings"
+title: "A Multiverse Analysis on the Topological Complexity of Network Traffic Embeddings"
 subtitle: "Data-driven estimates of dataset quality without expert knowledge"
 jupyter: python3
 author:
@@ -12,6 +12,7 @@ format:
     revealjs:
         theme: white
         slide-number: true
+        auto-stretch: false
         incremental: true
         center: true
         width: 1920
@@ -318,130 +319,65 @@ if __name__ == "__main__":
 
 ::: {.fragment .fade-up fragment-index=2}
 ::: {.fragment .highlight-green fragment-index=2}
-**Study the quality of datasets!**
+**Study the quality of datasets**
 :::
 :::
-
-## The idea
-### A high-quality dataset is one that, given the perfect model, facilitates cross-dataset generalization.
-
 
 ## Preliminaries
 1. Deep learning (embedding) prevalence
 2. Anomaly-based intrusion detection
 
-
-## So now what?
-
-Datasets are only **partially representative** and often flawed
-
-New studies are constantly published based on these datasets
-
-Performance is **outstanding** but **meaningless**
-
-Practical adoption is **minimal**
-
-## Data-driven estimate of dataset quality
-
-
-
-## {auto-animate=true}
-
-::: {.fake-h1 style="display: inline-block;"}
-Characterizing
+## The idea
+:::: {.columns .nonincremental}
+::: {.column width="75%" .nonincremental}
+::: {.fragment fragment-index=1 style="margin-top:50px; margin-bottom:240px;"}
+- High-quality data facilitates cross-dataset generalization.
 :::
 
-::: {.fake-h1 style="display: inline-block;"}
-[topological complexity]{data-id="t1" auto-animate-duration=0.2}
+::: {.fragment fragment-index=3 style="margin-bottom:240px;"}
+- High-quality latent representations are robust against nuisance variation.
 :::
 
-::: {.fake-h1 style="display: inline-block;"}
-of
+::: {.fragment fragment-index=5 style="margin-bottom:240px;"}
+- Measuring latent variability under induced nuisance variation estimates representation quality.
+:::
 :::
 
-::: {.fake-h1 style="display: inline-block;"}
-[embedding spaces]{data-id="t2" auto-animate-duration=0.2}
+::: {.column width="25%" .nonincremental}
+::: {style="position:relative; top:-100px; left:0px; width:500px;"}
+![](/figures/idea11.png){.fragment fragment-index="1" style="width:70%; height:auto;"}
+
+![](/figures/idea2.png){.fragment fragment-index="3" style="width:70%; height:auto;"}
+
+![](/figures/idea3.png){.fragment fragment-index="5" style="width:70%; height:auto;"}
+:::
+:::
+::::
+
+
+## Setup
+
+::: {style="font-size: 54px;"}
+1. Induce preprocessing variability
+2. Train AE
+3. Retrieve embedding space
+4. Compute topological complexity
+5. Interpret sample variance
 :::
 
-::: {.fake-h1 style="display: inline-block;"}
- through a <br> 
+## Setup {.nonincremental}
+
+::: {.nonincremental style="font-size: 54px;"}
+1. Induce preprocessing variability **⟶ Multiverse analysis** 
+2. Train AE
+3. Retrieve embedding space
+4. Compute topological complexity **⟶ Persistent homology**
+5. Interpret sample variance
 :::
 
-
-::: {.fake-h1 style="display: inline-block;"}
-[multiverse analysis]{data-id="t3" auto-animate-duration=0.2}
-:::
-
-::: {.fake-h1 style="display: inline-block;"}
-.
-:::
-
-
-## {auto-animate=true}
-
-
-::: {.fake-h1 auto-animate-duration=2 style="display: inline-block;"}
-Characterizing 
-:::
-
-::: {.fake-h1 style="display: inline-block;"}
-[topological complexity]{data-id="t1" auto-animate-duration=0.2 style="color: blue;"}
-:::
-
-::: {.fake-h1 auto-animate-duration=2 style="display: inline-block;"}
-of
-:::
-
-::: {.fake-h1 style="display: inline-block;"}
-[embedding spaces]{data-id="t2" auto-animate-duration=0.2 style="color: green;"}
-:::
-
-::: {.fake-h1 auto-animate-duration=2 style="display: inline-block;"}
- through a <br> 
-:::
-
-
-::: {.fake-h1 style="display: inline-block;"}
-[multiverse analysis]{data-id="t3" auto-animate-duration=0.2 style="color: red;"}
-:::
-
-::: {.fake-h1 auto-animate-duration=2 style="display: inline-block;"}
-.
-:::
-
-
-## {auto-animate=true style="margin-top: -100px;"}
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 0px; margin-left: -120px;"}
-[topological complexity]{data-id="t1" style="color: blue"}
-:::
-
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 300px; margin-left: -120px;"}
-[embedding spaces]{data-id="t2" style="color: green;"}
-:::
-
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 300px; margin-left: -120px;"}
-[multiverse analysis]{data-id="t3" style="color: red"}
-:::
-
-
-## {auto-animate=true style="margin-top: -100px;"}
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 0px; margin-left: -120px;"}
-[topological complexity]{data-id="t1" style="color: blue"}
-:::
-
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 300px; margin-left: -120px;"}
-[embedding spaces]{data-id="t2" style="color: green;"}
-:::
-
-
-::: {.fake-h1 style="display: block; font-size: 64px; margin-top: 300px; margin-left: -120px;"}
-[multiverse analysis]{data-id="t3" style="color: red"}
-:::
+## Multiverse analysis
+- test 1
+- test 2
 
 ## Multiple points
 
