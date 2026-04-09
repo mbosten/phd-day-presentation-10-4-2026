@@ -33,25 +33,25 @@ export function createTorusScene(container, options = {}) {
   overlay.style.top = "12px";
   overlay.style.left = "12px";
   overlay.style.zIndex = "10";
-  overlay.style.padding = "14px 22px";
+  overlay.style.padding = "16px 30px";
   overlay.style.borderRadius = "8px";
-  overlay.style.background = "rgba(255,255,255,0.88)";
+  overlay.style.background = "rgba(255,255,255,0.85)";
   overlay.style.backdropFilter = "blur(4px)";
   overlay.style.boxShadow = "0 6px 18px rgba(0,0,0,0.08)";
   overlay.style.display = "flex";
   overlay.style.alignItems = "center";
-  overlay.style.gap = "16px";
+  overlay.style.gap = "18px";
   overlay.style.fontFamily = "system-ui, -apple-system, sans-serif";
-  overlay.style.fontSize = "1.05rem";
+  overlay.style.fontSize = "2.0rem";
 
   // Regenerate button
   const regenBtn = document.createElement("button");
   regenBtn.textContent = "Regenerate";
   regenBtn.style.border = "none";
-  regenBtn.style.padding = "10px 14px";
-  regenBtn.style.borderRadius = "8px";
-  regenBtn.style.fontSize = "1rem";
-  regenBtn.style.fontWeight = "600";
+  regenBtn.style.padding = "12px 18px";
+  regenBtn.style.borderRadius = "10px";
+  regenBtn.style.fontSize = "1.4rem";
+  regenBtn.style.fontWeight = "400";
   regenBtn.style.cursor = "pointer";
 
   // Slider wrapper
@@ -65,7 +65,7 @@ export function createTorusScene(container, options = {}) {
   const labelRow = document.createElement("div");
   labelRow.style.display = "flex";
   labelRow.style.justifyContent = "space-between";
-  labelRow.style.fontSize = "0.95rem";
+  labelRow.style.fontSize = "1.2rem";
   labelRow.style.fontWeight = "500";
   labelRow.innerHTML = `<span>r</span><span id="rValue">0.00</span>`;
 

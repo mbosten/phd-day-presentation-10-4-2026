@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Maarten Bosten">
-  <title>A Multiverse Analysis on Topological Complexity of Network Traffic Embeddings</title>
+  <title>A Multiverse Analysis on the Topological Complexity of Network Traffic Embeddings</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,7 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">A Multiverse Analysis on Topological Complexity of Network Traffic Embeddings</h1>
+  <h1 class="title">A <span style="color: #FFC847;">Multiverse Analysis</span> on the <span style="color: #06D6A0">Topological Complexity</span> of Network Traffic <span style="color: #118AB2">Embeddings</span></h1>
   <p class="subtitle">Data-driven estimates of dataset quality without expert knowledge</p>
 
 <div class="quarto-title-authors">
@@ -211,52 +211,29 @@ Maarten Bosten
 </div>
 
 </section>
-<section id="network-intrusion-detection-research" class="slide level2 center">
+<section id="network-intrusion-detection-research" class="slide level2 incremental center">
 <h2>Network Intrusion Detection Research</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment" data-fragment-index="1">
+<div class="column" style="width:55%;">
 <ul>
-<li>Stellar intrusion detection performance</li>
-</ul>
-</div>
-<div class="fragment" data-fragment-index="2">
+<li class="fragment">Stellar intrusion detection performance</li>
+<li class="fragment">Overly complex pipelines ➜ Marginal improvements</li>
+<li class="fragment">Known dataset flaws
 <ul>
-<li>Overly complex pipelines ➜ Marginal improvements</li>
-</ul>
-</div>
-<div class="fragment" data-fragment-index="3">
-<ul>
-<li>Known dataset flaws
-<ul>
-<li>Marginally representative</li>
-<li>Outdated</li>
-<li>Spurious features</li>
+<li class="fragment">Marginally representative</li>
+<li class="fragment">Outdated</li>
+<li class="fragment">Spurious features</li>
 </ul></li>
+<li class="fragment">Poor cross-dataset generalization performance</li>
+<li class="fragment">Minimal real-world implementation</li>
 </ul>
-</div>
+</div><div class="column" style="width:45%;">
 <div class="fragment">
-<ul>
-<li>Sampling bias &amp; data snooping are widespread</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Poor cross-dataset generalization performance</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Minimal real-world implementation</li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment" data-fragment-index="0">
-<div id="d821d909" class="cell" data-execution_count="1">
+<div id="7d752d59" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="lay-presentation_files/figure-revealjs/cell-2-output-1.png" class="quarto-figure quarto-figure-center" width="836" height="832"></p>
+<p><img data-src="lay-presentation_files/figure-revealjs/cell-2-output-1.png" class="quarto-figure quarto-figure-center" width="867" height="832"></p>
 </figure>
 </div>
 </div>
@@ -267,7 +244,7 @@ Maarten Bosten
 <section id="so-now-what" class="slide level2 center">
 <h2>So now what?</h2>
 <div class="fragment" data-fragment-index="0">
-<div class="fragment highlight-current-red" data-fragment-index="1">
+<div class="fragment highlight-current-red strike" data-fragment-index="1">
 <p><strong>Yet another intrusion detection model?</strong></p>
 </div>
 </div>
@@ -281,24 +258,25 @@ Maarten Bosten
 <h2>Preliminaries</h2>
 <ol type="1">
 <li class="fragment">Deep learning (embedding) prevalence</li>
-<li class="fragment">Anomaly-based intrusion detection</li>
+<li class="fragment">Signature-based</li>
+<li class="fragment">Anomaly-based</li>
 </ol>
 </section>
 <section id="the-idea" class="slide level2 center">
 <h2>The idea</h2>
 <div class="columns">
 <div class="column" style="width:75%;">
-<div class="fragment" data-fragment-index="1" style="margin-top:50px; margin-bottom:240px;">
+<div class="fragment bullet-yellow" data-fragment-index="1" style="margin-top:50px; margin-bottom:240px;">
 <ul>
 <li>High-quality data facilitates cross-dataset generalization.</li>
 </ul>
 </div>
-<div class="fragment" data-fragment-index="3" style="margin-bottom:240px;">
+<div class="fragment bullet-green" data-fragment-index="3" style="margin-bottom:240px;">
 <ul>
 <li>High-quality latent representations are robust against nuisance variation.</li>
 </ul>
 </div>
-<div class="fragment" data-fragment-index="5" style="margin-bottom:240px;">
+<div class="fragment bullet-blue" data-fragment-index="5" style="margin-bottom:240px;">
 <ul>
 <li>Measuring latent variability under induced nuisance variation estimates representation quality.</li>
 </ul>
@@ -313,7 +291,6 @@ Maarten Bosten
 </section>
 <section id="setup" class="slide level2 center">
 <h2>Setup</h2>
-<div style="font-size: 54px;">
 <ol type="1">
 <li class="fragment">Induce preprocessing variability</li>
 <li class="fragment">Train AE</li>
@@ -321,36 +298,35 @@ Maarten Bosten
 <li class="fragment">Compute topological complexity</li>
 <li class="fragment">Interpret sample variance</li>
 </ol>
-</div>
 </section>
-<section id="setup-1" class="slide level2 nonincremental center">
+<section id="setup-1" class="slide level2 center">
 <h2>Setup</h2>
-<div style="font-size: 54px;">
 <ol type="1">
-<li>Induce preprocessing variability <strong>⟶ Multiverse analysis</strong></li>
+<li>Induce preprocessing variability <span class="yellow"><strong>⟶ Multiverse analysis</strong></span></li>
 <li>Train AE</li>
 <li>Retrieve embedding space</li>
-<li>Compute topological complexity <strong>⟶ Persistent homology</strong></li>
+<li>Compute topological complexity <span class="red"><strong>⟶ Persistent homology</strong></span></li>
 <li>Interpret sample variance</li>
 </ol>
-</div>
 </section>
-<section id="multiverse-analysis" class="slide level2 center">
+<section id="multiverse-analysis" class="slide level2 center" data-transition="slide-in slide-out">
 <h2>Multiverse analysis</h2>
 <ul>
-<li class="fragment">test 1</li>
-<li class="fragment">test 2</li>
+<li class="fragment">Statistical tool</li>
+<li class="fragment">Researcher degrees of freedom</li>
+<li class="fragment">Infinitely many models</li>
+<li class="fragment">Conclusion robustness</li>
+<li class="fragment">Preprocessing or hyperparameters</li>
 </ul>
 </section>
-<section id="multiple-points" class="slide level2 center">
-<h2>Multiple points</h2>
-<p>Each point is an observation</p>
-<p>So we are interested in multiple points.</p>
+<section id="persistent-homology" class="slide level2 center" data-transition="slide-in none-out">
+<h2>Persistent homology</h2>
+<p><span class="fragment">Which <span class="yellow"><strong>topological features</strong></span> <span class="green"><strong>most saliently</strong></span> characterize my point cloud?</span></p>
 </section>
 <section class="slide level2 center">
 
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="390" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 389;"><span id="cb1-390"><a href=""></a>containercube <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="370" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 369;"><span id="cb1-370"><a href=""></a>containercube <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -358,11 +334,11 @@ Maarten Bosten
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="395" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 394;"><span id="cb2-395"><a href=""></a><span class="im">import</span> {createCubeScene} <span class="im">from</span> <span class="st">"./visualizations/cubeScene.js"</span><span class="op">;</span></span>
-<span id="cb2-396"><a href=""></a></span>
-<span id="cb2-397"><a href=""></a>cubescene <span class="op">=</span> <span class="fu">createCubeScene</span>(containercube<span class="op">,</span> {</span>
-<span id="cb2-398"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
-<span id="cb2-399"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="375" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 374;"><span id="cb2-375"><a href=""></a><span class="im">import</span> {createCubeScene} <span class="im">from</span> <span class="st">"./visualizations/cubeScene.js"</span><span class="op">;</span></span>
+<span id="cb2-376"><a href=""></a></span>
+<span id="cb2-377"><a href=""></a>cubescene <span class="op">=</span> <span class="fu">createCubeScene</span>(containercube<span class="op">,</span> {</span>
+<span id="cb2-378"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">100</span><span class="op">,</span></span>
+<span id="cb2-379"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -382,7 +358,7 @@ Maarten Bosten
 <section class="slide level2 center">
 
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="405" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 404;"><span id="cb3-405"><a href=""></a>containertorus <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="385" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 384;"><span id="cb3-385"><a href=""></a>containertorus <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;div style="width:100%; height:1070px; margin:0px; border-radius:0px; overflow:hidden;"&gt;&lt;/div&gt;`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="declaration">
 
@@ -390,11 +366,11 @@ Maarten Bosten
 </div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="410" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 409;"><span id="cb4-410"><a href=""></a><span class="im">import</span> {createTorusScene} <span class="im">from</span> <span class="st">"./visualizations/torusScene.js"</span><span class="op">;</span></span>
-<span id="cb4-411"><a href=""></a></span>
-<span id="cb4-412"><a href=""></a>torusscene <span class="op">=</span> <span class="fu">createTorusScene</span>(containertorus<span class="op">,</span> {</span>
-<span id="cb4-413"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
-<span id="cb4-414"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb4" data-startfrom="390" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 389;"><span id="cb4-390"><a href=""></a><span class="im">import</span> {createTorusScene} <span class="im">from</span> <span class="st">"./visualizations/torusScene.js"</span><span class="op">;</span></span>
+<span id="cb4-391"><a href=""></a></span>
+<span id="cb4-392"><a href=""></a>torusscene <span class="op">=</span> <span class="fu">createTorusScene</span>(containertorus<span class="op">,</span> {</span>
+<span id="cb4-393"><a href=""></a>  <span class="dt">numPoints</span><span class="op">:</span> <span class="dv">200</span><span class="op">,</span></span>
+<span id="cb4-394"><a href=""></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -411,12 +387,29 @@ Maarten Bosten
 </div>
 </div>
 </section>
-<section id="wow" class="slide level2 center">
-<h2>wow</h2>
-<div class="iframe-wrapper">
-<p><iframe id="phframe" src="https://mbosten.github.io/simplicial-homology-visualization/" title="Persistent Homology Demo" allowfullscreen=""></iframe></p>
+<section class="slide level2 center">
+
+<p><span class="yellow fragment">Growing balls around the points</span> <span class="fragment">creates a <span class="green">scale-dependent graph</span>,</span></p>
+<p><span class="fragment">which results in <span class="blue">scale-dependent homological features</span>.</span></p>
+<p><span class="fragment"><span class="red">Integrating over scale</span> gives the <span class="red">persistent homology</span> of the point cloud.</span></p>
+</section>
+<section class="slide level2 center">
+
+<div style="text-align: center; margin-top: 1em">
+<p><a href="https://mbosten.github.io/simplicial-homology-visualization/" class="demo-button" data-preview-link="true" style="text-align: center">Click here for a demonstration!</a></p>
 </div>
 </section>
+<section class="slide level2 center">
+
+</section>
+<section>
+<section id="examples-please" class="title-slide slide level1 center">
+<h1>Examples please?</h1>
+
+</section>
+<section id="wdw" class="slide level2 center">
+<h2>wdw</h2>
+</section></section>
 <section id="the-shape-of-a-point-cloud" class="title-slide slide level1 center">
 <h1>The shape of a point cloud…</h1>
 <div class="fragment">

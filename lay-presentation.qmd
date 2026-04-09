@@ -1,5 +1,5 @@
 ---
-title: "A Multiverse Analysis on the Topological Complexity of Network Traffic Embeddings"
+title: "A [Multiverse Analysis]{style=\"color: #FFC847;\"} on the [Topological Complexity]{style=\"color: #06D6A0\"} of Network Traffic [Embeddings]{style=\"color: #118AB2\"}"
 subtitle: "Data-driven estimates of dataset quality without expert knowledge"
 jupyter: python3
 author:
@@ -23,42 +23,22 @@ format:
         css: laystyle.css
 ---
 
-## Network Intrusion Detection Research 
+## Network Intrusion Detection Research {.incremental}
 
-:::: {.columns .nonincremental}
-::: {.column width="50%" .nonincremental}
-
-::: {.fragment fragment-index=1}
+:::: {.columns .incremental}
+::: {.column width="55%" .incremental}
 - Stellar intrusion detection performance
-:::
-
-::: {.fragment fragment-index=2}
 - Overly complex pipelines ➜ Marginal improvements
-:::
-
-::: {.fragment .nonincremental fragment-index=3}
 - Known dataset flaws
     - Marginally representative
     - Outdated
     - Spurious features
-:::
-
-::: {.fragment}
-- Sampling bias & data snooping are widespread
-:::
-
-::: {.fragment}
 - Poor cross-dataset generalization performance
-:::
-
-::: {.fragment}
 - Minimal real-world implementation
 :::
 
-:::
-
-::: {.column width="50%" .nonincremental}
-::: {.fragment fragment-index=0}
+::: {.column width="45%" .incremental}
+::: {.fragment}
 ```{python}
 #| fig-align: center
 
@@ -152,7 +132,7 @@ def generate_spaghetti_wall_figure(
     named_strands=None,
     figsize=(11, 11),
     wall_color="white",
-    pasta_color="#d8c07a",
+    pasta_color="#FFC847",
     neutral_alpha=0.97,
 ):
     """
@@ -280,7 +260,7 @@ def generate_spaghetti_wall_figure(
         ax.text(
             lx, ly, label,
             color=color,
-            fontsize=13,
+            fontsize=14,
             ha=ha,
             va="center",
             zorder=7,
@@ -293,9 +273,9 @@ def generate_spaghetti_wall_figure(
 
 if __name__ == "__main__":
     named = {
-        4:  ("t-SNE + GFS + GAN", "#1f77b4"),
-        18: ("AE + DRL + IFSA + SVM", "#d62728"),
-        9: ("ADASYN-SMOTE + ENN + Transformer + DNN", "#2ca02c"),
+        4:  ("t-SNE + GFS + GAN", "#D7263D"),
+        18: ("AE + DRL + IFSA + SVM", "#D7263D"),
+        9: ("ADASYN-SMOTE + ENN + Transformer + DNN", "#D7263D"),
     }
 
     fig, ax = generate_spaghetti_wall_figure(
@@ -312,7 +292,7 @@ if __name__ == "__main__":
 ## So now what?
 
 ::: {.fragment fragment-index=0}
-::: {.fragment .highlight-current-red fragment-index=1}
+::: {.fragment .highlight-current-red .strike fragment-index=1}
 **Yet another intrusion detection model?**
 :::
 :::
@@ -325,20 +305,21 @@ if __name__ == "__main__":
 
 ## Preliminaries
 1. Deep learning (embedding) prevalence
-2. Anomaly-based intrusion detection
+2. Signature-based 
+3. Anomaly-based
 
 ## The idea
 :::: {.columns .nonincremental}
 ::: {.column width="75%" .nonincremental}
-::: {.fragment fragment-index=1 style="margin-top:50px; margin-bottom:240px;"}
+::: {.fragment fragment-index=1 .bullet-yellow style="margin-top:50px; margin-bottom:240px;"}
 - High-quality data facilitates cross-dataset generalization.
 :::
 
-::: {.fragment fragment-index=3 style="margin-bottom:240px;"}
+::: {.fragment fragment-index=3 .bullet-green style="margin-bottom:240px;"}
 - High-quality latent representations are robust against nuisance variation.
 :::
 
-::: {.fragment fragment-index=5 style="margin-bottom:240px;"}
+::: {.fragment fragment-index=5 .bullet-blue style="margin-bottom:240px;"}
 - Measuring latent variability under induced nuisance variation estimates representation quality.
 :::
 :::
@@ -356,8 +337,7 @@ if __name__ == "__main__":
 
 
 ## Setup
-
-::: {style="font-size: 54px;"}
+::: {.incremental}
 1. Induce preprocessing variability
 2. Train AE
 3. Retrieve embedding space
@@ -365,25 +345,25 @@ if __name__ == "__main__":
 5. Interpret sample variance
 :::
 
-## Setup {.nonincremental}
-
-::: {.nonincremental style="font-size: 54px;"}
-1. Induce preprocessing variability **⟶ Multiverse analysis** 
+## Setup
+::: {.nonincremental}
+1. Induce preprocessing variability [**⟶ Multiverse analysis**]{.yellow} 
 2. Train AE
 3. Retrieve embedding space
-4. Compute topological complexity **⟶ Persistent homology**
+4. Compute topological complexity [**⟶ Persistent homology**]{.red}
 5. Interpret sample variance
 :::
 
-## Multiverse analysis
-- test 1
-- test 2
+## Multiverse analysis {transition="slide-in slide-out"}
+- Statistical tool
+- Researcher degrees of freedom
+- Infinitely many models
+- Conclusion robustness
+- Preprocessing or hyperparameters
 
-## Multiple points
+## Persistent homology {transition="slide-in none-out"}
+[Which [**topological features**]{.yellow} [**most saliently**]{.green} characterize my point cloud?]{.fragment}
 
-Each point is an observation
-
-So we are interested in multiple points.
 
 ---
 
@@ -417,12 +397,24 @@ torusscene = createTorusScene(containertorus, {
 
 ---
 
-## wow
+[Growing balls around the points]{.yellow .fragment} [creates a [scale-dependent graph]{.green},]{.fragment}
 
-<div class="iframe-wrapper">
-  <iframe id="phframe" src="https://mbosten.github.io/simplicial-homology-visualization/" 
-          title="Persistent Homology Demo" allowfullscreen></iframe>
-</div>
+[which results in [scale-dependent homological features]{.blue}.]{.fragment}
+
+[[Integrating over scale]{.red} gives the [persistent homology]{.red} of the point cloud.]{.fragment}
+
+---
+
+::: {.nonincremental style="text-align: center; margin-top: 1em"}
+[Click here for a demonstration!](https://mbosten.github.io/simplicial-homology-visualization/){.demo-button preview-link="true" style="text-align: center"}
+:::
+
+--- 
+
+# Examples please?
+
+## wdw
+
 
 # The shape of a point cloud...
 

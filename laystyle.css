@@ -10,7 +10,11 @@
 
 /* Target the fragment for current highlight */
 .reveal .fragment .highlight-green {
-  color: #008000 !important;    /* dark green */
+  color: #06D6A0 !important;    /* dark green */
+}
+
+.reveal .fragment.highlight-current-red.current-fragment {
+  color: #D7263D !important;    /* dark green */
 }
 
 /* For title separation slides */
@@ -65,4 +69,198 @@
   content: "Vietoris–Rips complex"; /* use the longer of the two */
   visibility: hidden;
   white-space: nowrap;
+}
+
+/* Make lists larger font size */
+.reveal ul li,
+.reveal ol li {
+  font-size: 3rem;
+}
+
+/* Nested lists scale relative to parent */
+.reveal ul ul,
+.reveal ol ol,
+.reveal ul ol,
+.reveal ol ul {
+  font-size: 0.75em;
+}
+
+/* Bold list markers */
+.reveal ol li::marker,
+.reveal ul li::marker {
+  font-weight: bold;
+}
+
+/* Coloring individual bullets separated by a div */
+.reveal .fragment.bullet-yellow li::marker  { color: #FFC847; }
+.reveal .fragment.bullet-green li::marker   { color: #06D6A0; }
+.reveal .fragment.bullet-blue li::marker    { color: #118AB2; }
+.reveal .fragment.bullet-red li::marker     { color: #D7263D; }
+.reveal .fragment.bullet-violet li::marker  { color: #3B1C32; }
+
+/* Multicolor list cycle */
+.reveal li:nth-child(5n+1)::marker { color: #FFC847; }
+.reveal li:nth-child(5n+2)::marker { color: #06D6A0; }
+.reveal li:nth-child(5n+3)::marker { color: #118AB2; }
+.reveal li:nth-child(5n+4)::marker { color: #D7263D; }
+.reveal li:nth-child(5n+5)::marker { color: #3B1C32; }
+
+
+
+
+/* Coloring individual text */
+.yellow { color: #FFC847; }
+.green  { color: #06D6A0; }
+.blue   { color: #118AB2; }
+.red    { color: #D7263D; }
+.violet { color: #3B1C32; }
+
+
+
+/* ALL THINGS DEMO BUTTON */
+.demo-button {
+  display: inline-block;
+  background-clip: padding-box;
+  padding: 22px 42px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 999px;
+  color: #3B1C32;
+
+  background: linear-gradient(135deg, #06D6A0 0%, #FFC847 100%);
+  border: none;
+
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  /* Depth */
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    0 4px 10px rgba(17, 138, 178, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25), /* replaces border */
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  /* Smooth interaction */
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+
+  /* Refined pulse */
+  animation: pulseRing 3s infinite cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Subtle glossy highlight */
+.demo-button::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.10) 35%,
+    rgba(255, 255, 255, 0.00) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Soft ambient glow layer */
+.demo-button::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  background: linear-gradient(135deg,
+    rgba(6, 214, 160, 0.28),
+    rgba(255, 200, 71, 0.28)
+  );
+  filter: blur(10px);
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Keep hover stable */
+.demo-button:hover {
+  transform: none;
+  filter: brightness(1.02);
+}
+
+/* Click effect */
+.demo-button:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.16),
+    0 2px 6px rgba(17, 138, 178, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* More elegant pulse */
+@keyframes pulseRing {
+  0% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 0 rgba(6, 214, 160, 0.22),
+      0 0 0 0 rgba(255, 200, 71, 0.30);
+  }
+  35% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 22px rgba(6, 214, 160, 0.00),
+      0 0 0 36px rgba(255, 200, 71, 0.00);
+  }
+  50% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 0 rgba(6, 214, 160, 0.00),
+      0 0 0 0 rgba(255, 200, 71, 0.00);
+  }
+  51% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 0 rgba(6, 214, 160, 0.22),
+      0 0 0 0 rgba(255, 200, 71, 0.30);
+  }
+  85% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 22px rgba(6, 214, 160, 0.00),
+      0 0 0 36px rgba(255, 200, 71, 0.00);
+  }
+  100% {
+    box-shadow:
+      0 10px 24px rgba(0, 0, 0, 0.18),
+      0 4px 10px rgba(17, 138, 178, 0.14),
+      inset 0 1px 0 rgba(255, 255, 255, 0.35),
+      0 0 0 0 rgba(6, 214, 160, 0.00),
+      0 0 0 0 rgba(255, 200, 71, 0.00);
+  }
+}
+
+/* Make sure we override the existing theme's hyperlink color */
+.demo-button,
+.demo-button:link,
+.demo-button:visited,
+.demo-button:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.reveal .demo-button:hover {
+  color: #118AB2; /* or any color you want */
 }

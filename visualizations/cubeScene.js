@@ -36,7 +36,7 @@ export function createCubeScene(container, options = {}) {
     overlay.style.alignItems = "center";
     overlay.style.gap = "18px";
     overlay.style.fontFamily = "system-ui, -apple-system, sans-serif";
-    overlay.style.fontSize = "2.0rem";   // increase base font size;
+    overlay.style.fontSize = "2.0rem";
 
     // Regenerate button
     const regenBtn = document.createElement("button");
