@@ -11,6 +11,8 @@ author:
 format:
     revealjs:
         theme: white
+        logo: /figures/TIUlogo.jpg
+        footer: "Maarten Bosten - PhD-day - 10-03-2026"
         slide-number: true
         auto-stretch: false
         incremental: true
@@ -408,59 +410,64 @@ torusscene = createTorusScene(containertorus, {
 ::: {.nonincremental style="text-align: center; margin-top: 1em"}
 [Click here for a demonstration!](https://mbosten.github.io/simplicial-homology-visualization/){.demo-button preview-link="true" style="text-align: center"}
 :::
+ 
 
---- 
+## The multiverse pipeline {style="text-align: center"}
+![](/figures/multiverse-pipeline.svg){.r-stretch}
 
-# Examples please?
+## From embedding to topological complexity
+<br>
 
-## wdw
-
-
-# The shape of a point cloud...
-
-. . . 
-
-Better, but not quite there yet
-
-# The shape of an embedding space ...
-
-. . . 
-
-this is getting more and more *complex*,
-
-but we are still missing something.
-
-# Topological complexity of an embedding space ...
-
-## Great, now inspect text centering 
-<!-- Relative positioning like below allows for text centering. -->
-[This is plain text]{.absolute left="30%"}
-
-## Where is an empty second order title placed?
-
-## We might also center text using r-stack
-::: {.r-stack}
-[Centered text]{.fragment}
+:::: {.columns}
+::: {.column .fragment fragment-index=1 width=25%}
+### Preparation
+::: {.nonincremental}
+- Normalize
+- PCA ^[[Projection method based on how much topology is retained.]{.fragment fragment-index="1"}]
+- Sample
+:::
 :::
 
-## Can we also make r-stack text big?
-::: {.r-stack .r-fit-text}
-[Big centered text]{.fragment}
+::: {.column .fragment fragment-index=2 width=40%}
+### Topological complexity
+::: {.nonincremental}
+- Simplicial complex
+- Persistent homology
+- Landscape $L^{2}$-norm
+:::
 :::
 
-## Without fragment:
-::: {.r-stack .r-fit-text}
-Big centered text
+::: {.column .fragment fragment-index=3 width=35%}
+### Metrics
+::: {.nonincremental}
+- Mean & variance
+- Equivalence classes
+- Statistical tests
+:::
+:::
+::::
+
+## Possible results
+topological complexity ...
+
+::: {style="margin-left: 2em;"}
+-   variance
+-   parameter sensivity
+-   parameter impact
+-   (Sub)optimal multiverse regions
 :::
 
-## And completely without title:
+## Questions
+- Should learned embeddings be robust against nuisance variability?
+- Are there better methods to learn an embedding of tabular data?
+- How might the method improve in order to better gauge dataset quality?
 
----
 
-::: {.r-stack .r-fit-text}
-Big centered text
-:::
-
----
-
-## test
+## What's next?
+- Correlate cross-dataset generalization with topological complexity
+- Optimize persistent homology computations to facilitate large matrices
+    - Projection methods 
+    - Simplicial complexes
+    - Distance metrics
+    - Sample size
+    - Homology dimensions
