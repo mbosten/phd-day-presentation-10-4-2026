@@ -22,7 +22,7 @@ format:
         fontsize: 44px
         auto-animate-unmatched: true
         auto-animate-easing: ease-in-out
-        css: laystyle.css
+        css: style.css
 ---
 
 ## Network Intrusion Detection Research {.incremental}
