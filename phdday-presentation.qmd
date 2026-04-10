@@ -12,7 +12,7 @@ format:
     revealjs:
         theme: white
         logo: /figures/TIUlogo.jpg
-        footer: "Maarten Bosten - PhD-day - 10-03-2026"
+        footer: "Maarten Bosten - PhD-day - 10-04-2026"
         slide-number: true
         auto-stretch: false
         incremental: true
