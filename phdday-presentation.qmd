@@ -25,7 +25,7 @@ format:
         css: style.css
 ---
 
-## Network Intrusion Detection Research {.incremental}
+## Network Intrusion Detection Research {.incremental transition="zoom"}
 
 :::: {.columns .incremental}
 ::: {.column width="55%" .incremental}
@@ -310,7 +310,7 @@ if __name__ == "__main__":
 2. Signature-based 
 3. Anomaly-based
 
-## The idea
+## The idea {transition="fade-in none-out"}
 :::: {.columns .nonincremental}
 ::: {.column width="75%" .nonincremental}
 ::: {.fragment fragment-index=1 .bullet-yellow style="margin-top:50px; margin-bottom:240px;"}
@@ -412,7 +412,7 @@ torusscene = createTorusScene(containertorus, {
 :::
  
 
-## The multiverse pipeline {style="text-align: center"}
+## The multiverse pipeline {style="text-align: center" transition="convex-in convex-out" transition-speed="slow"}
 ![](/figures/multiverse-pipeline.svg){.r-stretch}
 
 ## From embedding to topological complexity
