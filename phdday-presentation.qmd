@@ -471,3 +471,19 @@ topological complexity ...
     - Distance metrics
     - Sample size
     - Homology dimensions
+
+
+## Behind the slides
+:::: {.columns .nonincremental}
+::: {.column width=33% .nonincremental}
+![Presentation source code](/figures/presentation_repo_qr.png)
+:::
+
+::: {.column width=33% .nonincremental}
+![Persistent homology demo](/figures/ph_demo_qr.png)
+:::
+
+::: {.column width=33% .nonincremental}
+![Demo source code](/figures/ph_viz_repo_qr.png)
+:::
+::::

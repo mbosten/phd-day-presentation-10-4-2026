@@ -7,6 +7,12 @@
     transform: translateY(-50%), translateX(-50%);
 }
 
+.reveal .slide-logo {
+  max-height: 80px !important;  /* increase this */
+  max-width: none !important;
+}
+
+
 
 /* Target the fragment for current highlight */
 .reveal .fragment .highlight-green {
@@ -321,7 +327,6 @@
     font-size: 32px;
 }
 
-.reveal .slide-logo {
-  max-height: 80px !important;  /* increase this */
-  max-width: none !important;
+.reveal figcaption {
+  text-align: center;
 }
